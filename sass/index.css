@@ -11,7 +11,7 @@
 
 body {
   min-height: 100vh;
-  background-image: url(/images/background.png);
+  background-image: url(../images/background.png);
   font-family: "Gugi", cursive;
   color: #fff;
   left: 0;
