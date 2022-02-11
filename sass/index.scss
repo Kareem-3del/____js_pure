@@ -1,0 +1,217 @@
+@use './breakpoint' as scss;
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Kulim+Park:wght@200&family=Yeon+Sung&display=swap');
+:root{
+  --main-color: #f5deb3
+}
+*{
+  padding : 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  background-image: url(/images/background.png);
+  font-family: "Gugi", cursive;
+  color: #fff;
+  left: 0;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+h1,h2,h3,h4{
+  color: #f5deb3;
+  font-size: 3rem;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  &:hover{
+  color: var(--main-color);
+  }
+  &.active{
+    color: var(--main-color);
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+#img-pizza {
+  position: absolute;
+  right: -16rem;
+  filter: drop-shadow(2px 4px 6px black) brightness(0.8);
+  z-index: -1;
+}
+#img-mint {
+  position: absolute;
+  bottom: 0;
+  left: -4rem;
+  filter: drop-shadow(6px 6px 6px black);
+  transform: rotate(44deg);
+}
+.food{
+  &-container {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+  }
+  &-wrap {
+    padding: 1rem;
+    margin-top: 8rem;
+    p{
+      max-width: calc(100vw / 2.5);
+      min-width: 300px;
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+  }
+}
+.btn{
+  border: 0;
+  border-radius: 5rem;
+  background: #ffa600;
+  padding: 0.8rem;
+  color: #ffffff;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.navBar{
+  padding: 1rem;
+  display: flex;
+  ul{
+    margin: auto;
+    display: flex;
+    li{
+      padding: 0 0.5rem;
+
+    }
+  }
+}
+#logo{
+  color: var(--main-color);
+}
+.border-out{
+  border-top: 3px dashed var(--main-color);
+  border-radius: 50%;
+  width: 120vw;
+  display: block;
+  position: absolute;
+  height: 70vw;
+  transform: rotate(24deg);
+  left: -7vw;
+}
+
+.list-food {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.list-view {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+  max-width: 470px;
+}
+.list-wrap{
+  display: flex;
+}
+.list-menu {
+  border-left: 3px solid #f5deb3;
+  display: flex;
+  padding-left: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  li {
+    padding: 0.8rem 0;
+  }
+}
+.food-card {
+  margin: 1rem 0;
+  &-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__img{
+    width: 10rem;
+    border-radius: 1rem;
+    @include scss.mobile{
+      margin-right: 1rem;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+  &-info{
+    margin: 0 2rem;
+    @include scss.mobile{
+    display: none;
+    }
+  }
+  &__title{
+    font-size: 1.1rem;
+  }
+  &__description{
+    font-size: 0.7rem;
+  }
+  &-order{
+    display: flex;
+    flex-direction: column;
+  }
+  &__price{
+    font-size: 2rem;
+    text-align: center;
+  }
+  &__orderNum{
+    display: flex;
+    border: 2px solid var(--main-color);
+    border-radius: 0.25rem;
+    justify-content: space-between;
+    &__input{
+    padding: 0 1rem;
+    }
+    margin: 0.35rem 0;
+  }
+  &__plus , &__mines{
+    padding: 0 0.5rem;
+    background: var(--main-color);
+    color: black;
+    cursor: pointer;
+  }
+  &__btn{
+    background: var(--main-color);
+    border-radius: 0.25rem;
+    border: 0;
+    padding: 0.3rem;
+    cursor: pointer;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffa600;
+}
+::-webkit-scrollbar-track {
+  transition: 300ms ease all;
+  background: #1d1e20;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #555;
+}
