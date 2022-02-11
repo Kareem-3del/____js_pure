@@ -35,7 +35,7 @@ function add_available_food(food) {
     HtmlFood.id = food.id
     HtmlFood.innerHTML = `
                           <div class="food-card-wrap" ">
-                            <img class="food-card__img" src="${food.img || '/images/ads.jpg'}" alt="ads">
+                            <img class="food-card__img" src="${food.img || 'images/ads.jpg'}" alt="ads">
                             <div class="food-card-info">
                                 <h1 class="food-card__title">Hello my name</h1>
                                 <p class="food-card__description">
